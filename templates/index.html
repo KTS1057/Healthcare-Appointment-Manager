@@ -1,0 +1,930 @@
+{% extends "layout.html" %}
+
+{% block title %}Healthcare Appointment Manager{% endblock %}
+
+{% block content %}
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="py-5 text-white"
+style="background:linear-gradient(135deg,#0d6efd,#00c6ff);">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<span class="badge bg-warning text-dark fs-6 mb-3">
+India's Trusted Healthcare Platform
+</span>
+
+<h1 class="display-3 fw-bold">
+
+Your Health,<br>
+
+<span class="text-warning">
+
+Our Responsibility
+
+</span>
+
+</h1>
+
+<p class="lead mt-4">
+
+Book appointments with experienced doctors,
+consult specialists,
+manage your medical records,
+and receive quality healthcare
+from the comfort of your home.
+
+</p>
+
+<div class="mt-4">
+
+<a href="{{ url_for('register') }}"
+class="btn btn-warning btn-lg me-3 px-4">
+
+Register Free
+
+</a>
+
+<a href="{{ url_for('login') }}"
+class="btn btn-light btn-lg px-4">
+
+Login
+
+</a>
+
+</div>
+
+<div class="row mt-5">
+
+<div class="col-4">
+
+<h2 class="fw-bold">50+</h2>
+
+<p>Doctors</p>
+
+</div>
+
+<div class="col-4">
+
+<h2 class="fw-bold">1000+</h2>
+
+<p>Patients</p>
+
+</div>
+
+<div class="col-4">
+
+<h2 class="fw-bold">24×7</h2>
+
+<p>Support</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-6 text-center">
+
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=800"
+
+class="img-fluid rounded-4 shadow-lg"
+
+style="max-height:550px;">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="container py-5">
+
+<div class="text-center mb-5">
+
+<h2 class="fw-bold">
+
+Why Choose Us?
+
+</h2>
+
+<p class="text-muted">
+
+Providing quality healthcare services with experienced doctors.
+
+</p>
+
+</div>
+
+<div class="row">
+
+<div class="col-md-4 mb-4">
+
+<div class="card border-0 shadow h-100 text-center">
+
+<div class="card-body p-4">
+
+<div class="display-3 mb-3">
+
+👨‍⚕️
+
+</div>
+
+<h4>
+
+Expert Doctors
+
+</h4>
+
+<p>
+
+Highly experienced specialists
+available across multiple departments.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="card border-0 shadow h-100 text-center">
+
+<div class="card-body p-4">
+
+<div class="display-3 mb-3">
+
+📅
+
+</div>
+
+<h4>
+
+Easy Appointment
+
+</h4>
+
+<p>
+
+Book appointments online
+within a few clicks.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="card border-0 shadow h-100 text-center">
+
+<div class="card-body p-4">
+
+<div class="display-3 mb-3">
+
+❤️
+
+</div>
+
+<h4>
+
+Quality Healthcare
+
+</h4>
+
+<p>
+
+Modern treatment facilities
+with personalized care.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= OUR SERVICES ================= -->
+
+<section class="container py-5">
+
+    <div class="text-center mb-5">
+
+        <h2 class="fw-bold">
+            Our Medical Services
+        </h2>
+
+        <p class="text-muted">
+            We provide world-class healthcare services with experienced specialists.
+        </p>
+
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+
+            <div class="card border-0 shadow h-100 text-center p-4">
+
+                <div class="display-4 text-danger mb-3">
+                    ❤️
+                </div>
+
+                <h4>Cardiology</h4>
+
+                <p>Heart specialists providing advanced cardiac treatment.</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card border-0 shadow h-100 text-center p-4">
+
+                <div class="display-4 text-primary mb-3">
+                    🦷
+                </div>
+
+                <h4>Dentistry</h4>
+
+                <p>Complete dental care with modern equipment.</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card border-0 shadow h-100 text-center p-4">
+
+                <div class="display-4 text-success mb-3">
+                    🧠
+                </div>
+
+                <h4>Neurology</h4>
+
+                <p>Expert brain and nervous system specialists.</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card border-0 shadow h-100 text-center p-4">
+
+                <div class="display-4 text-warning mb-3">
+                    🦴
+                </div>
+
+                <h4>Orthopedics</h4>
+
+                <p>Bone, joint and muscle treatment from experts.</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card border-0 shadow h-100 text-center p-4">
+
+                <div class="display-4 text-info mb-3">
+                    👶
+                </div>
+
+                <h4>Pediatrics</h4>
+
+                <p>Special healthcare services for children.</p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card border-0 shadow h-100 text-center p-4">
+
+                <div class="display-4 text-secondary mb-3">
+                    👁️
+                </div>
+
+                <h4>Ophthalmology</h4>
+
+                <p>Complete eye care and vision treatment.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= STATISTICS ================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="row text-center">
+
+            <div class="col-md-3 mb-4">
+
+                <div class="card border-0 shadow p-4">
+
+                    <h1 class="text-primary fw-bold">
+
+                        50+
+
+                    </h1>
+
+                    <h5>Expert Doctors</h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="card border-0 shadow p-4">
+
+                    <h1 class="text-success fw-bold">
+
+                        1200+
+
+                    </h1>
+
+                    <h5>Patients</h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="card border-0 shadow p-4">
+
+                    <h1 class="text-warning fw-bold">
+
+                        5000+
+
+                    </h1>
+
+                    <h5>Appointments</h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 mb-4">
+
+                <div class="card border-0 shadow p-4">
+
+                    <h1 class="text-danger fw-bold">
+
+                        4.9★
+
+                    </h1>
+
+                    <h5>Hospital Rating</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="container py-5">
+
+<div class="text-center mb-5">
+
+<h2 class="fw-bold">
+
+Why Patients Trust Us
+
+</h2>
+
+<p class="text-muted">
+
+Delivering quality healthcare with compassion and excellence.
+
+</p>
+
+</div>
+
+<div class="row">
+
+<div class="col-lg-3 col-md-6 mb-4">
+
+<div class="card shadow border-0 h-100">
+
+<div class="card-body text-center">
+
+<div class="display-4 text-primary mb-3">
+
+🏥
+
+</div>
+
+<h4>Modern Hospital</h4>
+
+<p>
+
+Advanced infrastructure with world-class facilities.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6 mb-4">
+
+<div class="card shadow border-0 h-100">
+
+<div class="card-body text-center">
+
+<div class="display-4 text-success mb-3">
+
+🧑‍⚕️
+
+</div>
+
+<h4>Certified Doctors</h4>
+
+<p>
+
+Experienced doctors from top medical institutions.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6 mb-4">
+
+<div class="card shadow border-0 h-100">
+
+<div class="card-body text-center">
+
+<div class="display-4 text-danger mb-3">
+
+💊
+
+</div>
+
+<h4>Quality Treatment</h4>
+
+<p>
+
+Best treatment plans with affordable healthcare.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6 mb-4">
+
+<div class="card shadow border-0 h-100">
+
+<div class="card-body text-center">
+
+<div class="display-4 text-warning mb-3">
+
+⏰
+
+</div>
+
+<h4>24×7 Emergency</h4>
+
+<p>
+
+Emergency medical assistance available anytime.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="py-5 bg-primary text-white">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="fw-bold">
+
+What Our Patients Say
+
+</h2>
+
+</div>
+
+<div class="row">
+
+<div class="col-md-4 mb-4">
+
+<div class="card border-0 shadow">
+
+<div class="card-body">
+
+⭐⭐⭐⭐⭐
+
+<p class="mt-3">
+
+"The appointment booking process was smooth and very easy."
+
+</p>
+
+<h6>
+
+— Rahul Sharma
+
+</h6>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="card border-0 shadow">
+
+<div class="card-body">
+
+⭐⭐⭐⭐⭐
+
+<p class="mt-3">
+
+"Doctors were very professional and supportive."
+
+</p>
+
+<h6>
+
+— Priya Singh
+
+</h6>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4 mb-4">
+
+<div class="card border-0 shadow">
+
+<div class="card-body">
+
+⭐⭐⭐⭐⭐
+
+<p class="mt-3">
+
+"Highly recommended for online appointments."
+
+</p>
+
+<h6>
+
+— Aman Verma
+
+</h6>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CALL TO ACTION ================= -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="card shadow-lg border-0">
+
+<div class="card-body text-center p-5">
+
+<h2 class="fw-bold">
+
+Ready to Take Care of Your Health?
+
+</h2>
+
+<p class="lead">
+
+Create your account today and book appointments with experienced doctors.
+
+</p>
+
+<a href="{{ url_for('register') }}"
+
+class="btn btn-success btn-lg px-5">
+
+Register Now
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+
+<section class="container py-5">
+
+    <div class="text-center mb-5">
+
+        <h2 class="fw-bold">
+
+            Contact Us
+
+        </h2>
+
+        <p class="text-muted">
+
+            We'd love to hear from you. Reach out anytime.
+
+        </p>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-4 mb-4">
+
+            <div class="card shadow border-0 h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-geo-alt-fill display-4 text-danger"></i>
+
+                    <h4 class="mt-3">Address</h4>
+
+                    <p>
+
+                        Healthcare Hospital<br>
+
+                        Kanpur, Uttar Pradesh<br>
+
+                        India
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 mb-4">
+
+            <div class="card shadow border-0 h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-envelope-fill display-4 text-primary"></i>
+
+                    <h4 class="mt-3">Email</h4>
+
+                    <p>
+
+                        support@healthcare.com
+
+                    </p>
+
+                    <p>
+
+                        admin@healthcare.com
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 mb-4">
+
+            <div class="card shadow border-0 h-100">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-telephone-fill display-4 text-success"></i>
+
+                    <h4 class="mt-3">Phone</h4>
+
+                    <p>
+
+                        +91 9876543210
+
+                    </p>
+
+                    <p>
+
+                        +91 9123456789
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="py-5 bg-primary text-white">
+
+    <div class="container text-center">
+
+        <h2 class="fw-bold">
+
+            Stay Updated
+
+        </h2>
+
+        <p>
+
+            Subscribe for health tips and appointment updates.
+
+        </p>
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-6">
+
+                <div class="input-group">
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Enter your email">
+
+                    <button class="btn btn-warning">
+
+                        Subscribe
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white pt-5 pb-3">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <h3>
+
+                    <i class="bi bi-heart-pulse-fill text-danger"></i>
+
+                    Healthcare Manager
+
+                </h3>
+
+                <p>
+
+                    Making healthcare accessible through technology.
+
+                </p>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h5>
+
+                    Quick Links
+
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li><a href="/" class="text-white text-decoration-none">Home</a></li>
+
+                    <li><a href="/register" class="text-white text-decoration-none">Register</a></li>
+
+                    <li><a href="/login" class="text-white text-decoration-none">Login</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <h5>
+
+                    Follow Us
+
+                </h5>
+
+                <i class="bi bi-facebook fs-3 me-3"></i>
+
+                <i class="bi bi-instagram fs-3 me-3"></i>
+
+                <i class="bi bi-twitter-x fs-3 me-3"></i>
+
+                <i class="bi bi-linkedin fs-3"></i>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="text-center">
+
+            <p class="mb-0">
+
+                © 2026 Healthcare Appointment Manager | Developed by Kratarth Srivastava
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+{% endblock %}

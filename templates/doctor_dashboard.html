@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block title %}Doctor Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <h2 class="dashboard-title mb-4">
+        <i class="bi bi-person-badge-fill"></i>
+        Welcome Dr. {{ name }}
+    </h2>
+
+    <div class="row">
+
+        <div class="col-lg-4 mb-4">
+
+            <div class="dashboard-card card-blue">
+
+                <i class="bi bi-calendar-week display-4"></i>
+
+                <h2>Today</h2>
+
+                <h5>Appointments</h5>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 mb-4">
+
+            <div class="dashboard-card card-green">
+
+                <i class="bi bi-people-fill display-4"></i>
+
+                <h2>Patients</h2>
+
+                <h5>Records</h5>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 mb-4">
+
+            <div class="dashboard-card card-orange">
+
+                <i class="bi bi-person-circle display-4"></i>
+
+                <h2>Doctor</h2>
+
+                <h5>Profile</h5>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card mt-4">
+
+        <div class="card-header bg-primary text-white">
+
+            <h4 class="mb-0">
+
+                Doctor Panel
+
+            </h4>
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="row">
+
+                <div class="col-md-4 mb-3">
+
+                    <a href="{{ url_for('doctor_appointments') }}"
+                       class="btn btn-primary w-100">
+
+                        <i class="bi bi-calendar2-check"></i>
+
+                        View Appointments
+
+                    </a>
+
+                </div>
+
+                <div class="col-md-4 mb-3">
+
+                    <a href="{{ url_for('profile') }}"
+                       class="btn btn-warning w-100 text-white">
+
+                        <i class="bi bi-person-circle"></i>
+
+                        My Profile
+
+                    </a>
+
+                </div>
+
+                <div class="col-md-4 mb-3">
+
+                    <a href="{{ url_for('logout') }}"
+                       class="btn btn-danger w-100">
+
+                        <i class="bi bi-box-arrow-right"></i>
+
+                        Logout
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card mt-4">
+
+        <div class="card-header bg-success text-white">
+
+            <h4>
+
+                Doctor Services
+
+            </h4>
+
+        </div>
+
+        <div class="card-body">
+
+            <ul>
+
+                <li>✔ View today's appointments.</li>
+
+                <li>✔ View all assigned patients.</li>
+
+                <li>✔ Manage appointment schedule.</li>
+
+                <li>✔ Update profile information.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

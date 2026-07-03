@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block title %}Add Doctor{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-8">
+
+        <div class="card shadow">
+
+            <div class="card-header bg-primary text-white">
+
+                <h3>
+                    <i class="bi bi-person-plus-fill"></i>
+                    Add Doctor
+                </h3>
+
+            </div>
+
+            <div class="card-body">
+
+                <form method="POST">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+                                Doctor Name
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="name"
+                                placeholder="Enter Doctor Name"
+                                required>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+                                Specialization
+                            </label>
+
+                            <select
+                                class="form-select"
+                                name="specialization"
+                                required>
+
+                                <option value="">Select</option>
+
+                                <option>General Physician</option>
+                                <option>Cardiologist</option>
+                                <option>Dentist</option>
+                                <option>Neurologist</option>
+                                <option>Orthopedic</option>
+                                <option>Dermatologist</option>
+                                <option>Pediatrician</option>
+                                <option>Psychiatrist</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+                                Experience (Years)
+                            </label>
+
+                            <input
+                                type="number"
+                                class="form-control"
+                                name="experience"
+                                required>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label">
+                                Slot Duration (Minutes)
+                            </label>
+
+                            <input
+                                type="number"
+                                class="form-control"
+                                name="slot_duration"
+                                value="30"
+                                required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Working Hours
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="working_hours"
+                            placeholder="09:00 AM - 05:00 PM"
+                            required>
+
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-flex">
+
+                        <button
+                            class="btn btn-primary">
+
+                            <i class="bi bi-plus-circle-fill"></i>
+
+                            Add Doctor
+
+                        </button>
+
+                        <a
+                            href="{{ url_for('view_doctors') }}"
+                            class="btn btn-success">
+
+                            <i class="bi bi-eye-fill"></i>
+
+                            View Doctors
+
+                        </a>
+
+                        <a
+                            href="{{ url_for('admin') }}"
+                            class="btn btn-secondary">
+
+                            <i class="bi bi-arrow-left-circle-fill"></i>
+
+                            Dashboard
+
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

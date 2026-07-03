@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:Arial, Helvetica, sans-serif;
+            background:#f5f7fa;
+        }
+
+        .navbar{
+            background:#0d6efd;
+            color:white;
+            padding:18px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            margin-top:30px;
+        }
+
+        .welcome{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px rgba(0,0,0,.1);
+            margin-bottom:30px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:20px;
+        }
+
+        .card{
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0px 0px 10px rgba(0,0,0,.1);
+        }
+
+        .card h2{
+            color:#0d6efd;
+        }
+
+        .card p{
+            color:gray;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:15px;
+            background:#0d6efd;
+            color:white;
+            padding:10px 20px;
+            border-radius:5px;
+            text-decoration:none;
+        }
+
+        .btn:hover{
+            background:#084db3;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <h2>Healthcare Appointment Manager</h2>
+
+    <a href="/logout">Logout</a>
+
+</div>
+
+<div class="container">
+
+    <div class="welcome">
+
+        <h1>Welcome {{ name }}</h1>
+
+        <p>Manage your healthcare appointments easily.</p>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h2>Book Appointment</h2>
+
+            <p>Book an appointment with a doctor.</p>
+
+            <a href="/book-appointment" class="btn">
+                Book Now
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <h2>My Appointments</h2>
+
+            <p>View your booked appointments.</p>
+
+            <a href="/my-appointments" class="btn">
+                View
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Medical History</h2>
+
+            <p>Check your previous visits.</p>
+
+            <a href="#" class="btn">
+                Open
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Profile</h2>
+
+            <p>Update your profile information.</p>
+
+            <a href="#" class="btn">
+                Edit
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

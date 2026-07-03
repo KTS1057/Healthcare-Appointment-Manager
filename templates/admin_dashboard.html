@@ -1,0 +1,239 @@
+{% extends "layout.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">
+        <i class="bi bi-speedometer2"></i>
+        Welcome, {{ name }}
+    </h2>
+
+    <!-- Statistics -->
+
+    <div class="row mb-4">
+
+        <div class="col-lg-4 col-md-6 mb-3">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-person-badge display-4 text-primary"></i>
+
+                    <h1 class="mt-3">{{ total_doctors }}</h1>
+
+                    <h5>Total Doctors</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-3">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-people-fill display-4 text-success"></i>
+
+                    <h1 class="mt-3">{{ total_patients }}</h1>
+
+                    <h5>Total Patients</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-3">
+
+            <div class="card shadow border-0">
+
+                <div class="card-body text-center">
+
+                    <i class="bi bi-calendar-check display-4 text-warning"></i>
+
+                    <h1 class="mt-3">{{ total_appointments }}</h1>
+
+                    <h5>Total Appointments</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Quick Actions -->
+
+    <div class="card shadow mb-4">
+
+        <div class="card-header bg-primary text-white">
+
+            <h4 class="mb-0">
+
+                <i class="bi bi-lightning-charge-fill"></i>
+
+                Quick Actions
+
+            </h4>
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="row g-3">
+
+                <div class="col-lg-4 col-md-6">
+
+                    <a href="{{ url_for('add_doctor') }}"
+                       class="btn btn-primary w-100 py-3">
+
+                        <i class="bi bi-person-plus-fill"></i>
+
+                        Add Doctor
+
+                    </a>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <a href="{{ url_for('view_doctors') }}"
+                       class="btn btn-success w-100 py-3">
+
+                        <i class="bi bi-person-lines-fill"></i>
+
+                        View Doctors
+
+                    </a>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <a href="{{ url_for('view_patients') }}"
+                       class="btn btn-info text-white w-100 py-3">
+
+                        <i class="bi bi-people-fill"></i>
+
+                        View Patients
+
+                    </a>
+
+                </div>
+
+                <div class="col-lg-6 col-md-6">
+
+                    <a href="{{ url_for('view_appointments') }}"
+                       class="btn btn-warning text-white w-100 py-3">
+
+                        <i class="bi bi-calendar2-week-fill"></i>
+
+                        View Appointments
+
+                    </a>
+
+                </div>
+
+                <div class="col-lg-6 col-md-6">
+
+                    <a href="{{ url_for('logout') }}"
+                       class="btn btn-danger w-100 py-3">
+
+                        <i class="bi bi-box-arrow-right"></i>
+
+                        Logout
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Overview -->
+
+    <div class="card shadow">
+
+        <div class="card-header bg-success text-white">
+
+            <h4 class="mb-0">
+
+                <i class="bi bi-hospital"></i>
+
+                Hospital Management Overview
+
+            </h4>
+
+        </div>
+
+        <div class="card-body">
+
+            <p class="lead">
+
+                Manage your healthcare system from one place.
+
+            </p>
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item">
+                            ✅ Add Doctors
+                        </li>
+
+                        <li class="list-group-item">
+                            ✅ View Doctors
+                        </li>
+
+                        <li class="list-group-item">
+                            ✅ View Patients
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item">
+                            ✅ Manage Appointments
+                        </li>
+
+                        <li class="list-group-item">
+                            ✅ Monitor Hospital Records
+                        </li>
+
+                        <li class="list-group-item">
+                            ✅ Secure Admin Panel
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
